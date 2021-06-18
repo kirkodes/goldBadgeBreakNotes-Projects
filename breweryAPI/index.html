@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Brew Finder</title>
+</head>
+<body>
+    <!-- landing -->
+    <div class="landing">
+        <h1>Brew Finder</h1>
+        <p>Find breweries here, there, or anywhere.</p>
+    </div>
+    <!-- search -->
+        <!-- by city, state, distance (closest) -->
+    <section class="search">
+        <div class="byCity">
+            <h4 class="header">Search by City</h4>
+            <input type="text" id="byCity">
+            <button type="button" class="btn btn-dark" onclick="searchByCity()">Salud!</button>
+        </div>
+        <div class="byState">
+            <h4 class="header">Search by State</h4>
+            <input list="statelist" id="byState">
+            <datalist id="statelist">
+                <option value="Alabama"></option>
+                <option value="Alaska"></option>
+                <option value="Arizona"></option>
+                <option value="Arkansas"></option>
+                <option value="California"></option>
+                <option value="Colorado"></option>
+                <option value="Connecticut"></option>
+                <option value="Delaware"></option>
+                <option value="District of Columbia"></option>
+                <option value="Florida"></option>
+                <option value="Georgia"></option>
+                <option value="Hawaii"></option>
+                <option value="Idaho"></option>
+                <option value="Illinois"></option>
+                <option value="Indiana"></option>
+                <option value="Iowa"></option>
+                <option value="Kansas"></option>
+                <option value="Kentucky"></option>
+                <option value="Louisiana"></option>
+                <option value="Maine"></option>
+                <option value="Maryland"></option>
+                <option value="Massachusetts"></option>
+                <option value="Michigan"></option>
+                <option value="Minnesota"></option>
+                <option value="Mississippi"></option>
+                <option value="Missouri"></option>
+                <option value="Montana"></option>
+                <option value="Nebraska"></option>
+                <option value="Nevada"></option>
+                <option value="New Hampshire"></option>
+                <option value="New Jersey"></option>
+                <option value="New Mexico"></option>
+                <option value="New York"></option>
+                <option value="North Carolina"></option>
+                <option value="North Dakota"></option>
+                <option value="Ohio"></option>
+                <option value="Oklahoma"></option>
+                <option value="Oregon"></option>
+                <option value="Pennsylvania"></option>
+                <option value="Rhode Island"></option>
+                <option value="South Carolina"></option>
+                <option value="South Dakota"></option>
+                <option value="Tennessee"></option>
+                <option value="Texas"></option>
+                <option value="Utah"></option>
+                <option value="Vermont"></option>
+                <option value="Virginia"></option>
+                <option value="Washington"></option>
+                <option value="West Virginia"></option>
+                <option value="Wisconsin"></option>
+                <option value="Wyoming"></option>
+            </datalist>
+            <button type="button" class="btn btn-dark" onclick="searchByState()">Prost!</button>
+        </div>
+        <div class="byDistance">
+            <h4 class="header">Search by Nearest</h4>
+            <button type="button" class="btn btn-dark" onclick="searchByDistance()">Cheers!</button>
+        </div>
+    </section>
+    <!-- results -->
+    <section class="results">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Brewery Name</th>
+                    <th>Address</th>
+                    <th>Brewery Website</th>
+                    <th>Save</th>
+                </tr>
+            </thead>
+            <tbody class="resultTable"></tbody>
+        </table>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

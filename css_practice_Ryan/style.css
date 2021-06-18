@@ -1,0 +1,125 @@
+/*
+Specificity - keep it low
+// In order of importance element tag --> class name --> id --> inline styling --> !important(try to avoid)
+
+ */
+
+:root{
+    --mainTextColor: #0047AB;
+    --headerColors: #088F8F;
+}
+
+.main {
+    margin: 20% auto;
+    width: 40%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+input[type="checkbox"] + label {
+    color: grey;
+    font-style: italic;
+}
+
+input[type="checkbox"]:checked + label {
+    color: var(--mainTextColor);
+    font-style: normal;
+    font-weight: bold;
+}
+
+input[type="email"]:invalid:focus {
+    background-color: rgb(151, 92, 92);
+}
+
+.emailInput:invalid:focus{
+    background-color: darkkhaki;
+}
+
+.inputBtn{
+    color: rgb(200, 224, 224);
+    background-color: rgb(11, 149, 184);
+}
+
+.sharkList {
+    list-style: none;
+    margin: 10px 20px 10px 20px;
+    /* one value -  set value for ALL sides
+    two values - 1st value is for TOP and BOTTOM, second value is for L and R
+    three values - 1st value TOP, 2nd value is for L and R, 3rd value is for BOTTOM
+    four values - 1st top, 2nd right, 3rd bottom, 4th left*/
+    border: 2px solid var(--mainTextColor);
+    border-width: 3px;
+    border-style: groove;
+    border-color: var(--mainTextColor);
+}
+
+.sharkList li:nth-child(1), :nth-child(4){ /* :first-child, :last-child, :first-of-type*/
+    color: var(--mainTextColor)
+}
+
+/* ul, li, p {
+    background-color: skyblue;
+} */
+
+.shapeTest {
+    margin: 0 auto 3%;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(125, 211, 207);
+    border-radius: 20% 8% 3%;
+    /* Border Radius: 
+    One value: all 4 corners
+    two values: 1st value is for Top-Left and Bottom-Right, 2nd value is for Top-Right and Bottom-left
+    three values: 1st value is for Top-Left, 2nd value is for Top-Right and Bottom-Left, 3rd value is for Bottom-Right
+    Four values: Top-Left, Top-Right, Bottom-Right, Bottom-Left
+    */
+}
+/* DRY coding -  don't repeat yourself! */
+
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+  /* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+  /* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+  /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+  /* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
